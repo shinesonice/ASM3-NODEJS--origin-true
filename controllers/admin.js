@@ -4,12 +4,14 @@ const Order = require("../models/order");
 const RoomChat = require("../models/room-chat");
 
 module.exports.getProducts = (req, res, next) => {
+  console.log("=> admin/getProducts");
   Product.find().then((products) => {
     res.send(products);
   });
 };
 
 module.exports.getRoomChat = (req, res, next) => {
+  console.log("=> admin/getRoomChat");
   RoomChat.find().then((roomchats) => {
     res.send(roomchats);
   });
@@ -31,6 +33,7 @@ module.exports.postAddMessage = (req, res, next) => {
 };
 
 module.exports.getDashBoard = (req, res, next) => {
+  console.log("=> admin/getDashBoard");
   User.find({ role: "CLIENT" }).then((users) => {
     Order.find()
       .populate("userId")

@@ -11,7 +11,7 @@ module.exports.isAuth = (req, res, next) => {
   return;
 };
 module.exports.isCounselor = (req, res, next) => {
-  if (req.session.isCounselor) return next();
+  if (req.session.isCounselor || req.session.isAdmin) return next();
   console.log("Not isCounselor");
   res.send([]);
   return;

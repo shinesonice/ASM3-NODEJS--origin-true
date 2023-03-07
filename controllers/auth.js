@@ -5,6 +5,7 @@ const bcrypt = require("bcrypt");
 const salt = 12;
 
 module.exports.postSignUp = (req, res, next) => {
+  console.log("=> postSignUp");
   const name = req.body.name;
   const email = req.body.email;
   const password = req.body.password;
@@ -20,6 +21,7 @@ module.exports.postSignUp = (req, res, next) => {
 };
 
 module.exports.postLogin = (req, res, next) => {
+  console.log("=> postLogin");
   const email = req.body.email;
   const password = req.body.password;
 
@@ -60,6 +62,7 @@ module.exports.postLogin = (req, res, next) => {
 };
 
 module.exports.postLogout = (req, res, next) => {
+  console.log("=> postLogout");
   req.user = null;
   console.log("=> postLogout");
   RoomChat.findByIdAndDelete(req.session.roomchat._id).then((result) => {
@@ -70,6 +73,7 @@ module.exports.postLogout = (req, res, next) => {
 };
 
 module.exports.postAddMessage = (req, res, next) => {
+  console.log("=> postAddMessage");
   const isUser = req.body.isUser;
   const message = req.body.message;
   RoomChat.findByIdAndUpdate(req.session.roomchat._id).then((roomchat) => {
@@ -94,6 +98,7 @@ module.exports.getMessages = (req, res, next) => {
 };
 
 module.exports.getAutoLogin = (req, res, next) => {
+  console.log("=> getAutoLogin");
   if (!req.session.isLogin) return res.send({ result: false });
   res.send({
     result: true,
