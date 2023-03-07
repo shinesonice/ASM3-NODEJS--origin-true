@@ -12,13 +12,14 @@ let transporter = nodemailer.createTransport({
   },
 });
 
-const imgBanner = "http://localhost:5000/images/banner1.jpg";
+const imgBanner =
+  "https://nodejs-server-origin-true.onrender.com//images/banner1.jpg";
 const imgsTypeDevice = [
-  "http://localhost:5000/images/product_1.png",
-  "http://localhost:5000/images/product_2.png",
-  "http://localhost:5000/images/product_3.png",
-  "http://localhost:5000/images/product_4.png",
-  "http://localhost:5000/images/product_5.png",
+  "https://nodejs-server-origin-true.onrender.com/images/product_1.png",
+  "https://nodejs-server-origin-true.onrender.com/images/product_2.png",
+  "https://nodejs-server-origin-true.onrender.com/images/product_3.png",
+  "https://nodejs-server-origin-true.onrender.com/images/product_4.png",
+  "https://nodejs-server-origin-true.onrender.com/images/product_5.png",
 ];
 
 module.exports.getProducts = (req, res, next) => {
