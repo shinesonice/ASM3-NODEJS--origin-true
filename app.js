@@ -41,14 +41,14 @@ app.set("trust proxy", 1);
 
 app.use(
   cors({
-    // origin: [
-    //   "https://front-end-client--nodejs.web.app",
-    //   "https://front-end-admin--nodejs.web.app",
-    //   // "https://front-end-client--nodejs.web.app/",
-    //   // "http://localhost:3001/",
-    //   // "http://localhost:3000/",
-    // ],
-    origin: "https://front-end-client--nodejs.web.app",
+    origin: [
+      "https://front-end-client--nodejs.web.app",
+      "https://front-end-admin--nodejs.web.app",
+      // "https://front-end-client--nodejs.web.app/",
+      // "http://localhost:3001/",
+      // "http://localhost:3000/",
+    ],
+    // origin: "https://front-end-client--nodejs.web.app",
     // origin: true,
     methods: ["POST", "PUT", "GET", "OPTIONS", "HEAD"],
     credentials: true,
