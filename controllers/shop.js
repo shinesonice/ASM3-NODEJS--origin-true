@@ -13,7 +13,7 @@ let transporter = nodemailer.createTransport({
 });
 
 const imgBanner =
-  "https://nodejs-server-origin-true.onrender.com//images/banner1.jpg";
+  "https://nodejs-server-origin-true.onrender.com/images/banner1.jpg";
 const imgsTypeDevice = [
   "https://nodejs-server-origin-true.onrender.com/images/product_1.png",
   "https://nodejs-server-origin-true.onrender.com/images/product_2.png",
